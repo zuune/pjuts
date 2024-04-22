@@ -5,7 +5,7 @@
             <img src="/images/logo.png" class="h-10" alt="">
             
         </div>
-        <div></div>
+
     </nav>
 
 
