@@ -40,12 +40,12 @@
                                         <td class="border px-6 py-4">{{ $f->email }}</td>
                                         <td class="border px-6 py-4">
                                             <a href="{{ $f->foto }}" download="foto-selfie_{{ $f->name }}.png">
-                                                <img src="{{ $f->foto }}" alt="" class="w-full">
+                                                Download
                                             </a>
                                         </td>
                                         <td class="border px-6 py-4">
                                             <a href="{{ $f->foto_tiang }}" download="foto-tiang_{{ $f->name }}.png">
-                                                <img src="{{ $f->foto_tiang }}" alt="" class="w-full">
+                                                Download
                                             </a>
                                         </td>
                                         <td class="border px-6 py-4">{{ $f->titik }}</td>
