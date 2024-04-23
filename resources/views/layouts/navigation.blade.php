@@ -5,9 +5,13 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <img src="{{ asset('images/logo.png') }}" alt="" width="100">
+                    <a href="{{ route('dashboard') }}" class="mr-3">
+                        <img src="/images/logo.png" alt="" width="100">
                     </a>
+                    <a href="{{ route('dashboard') }}">
+                        <img src="/images/esdm-logo.png" alt="" width="40">                    
+                    </a>
+
                 </div>
 
                 <!-- Navigation Links -->

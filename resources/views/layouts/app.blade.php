@@ -4,10 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <!--  {{ config('app.name', 'Monitoring') }} -->
+        {{-- {{ config('app.name', 'Monitoring') }} --}}
         <title>Monitoring Pemeliharaan PJUTS</title>
         <script src="https://cdn.tailwindcss.com"></script>
 
+        {{-- Icons --}}
+        <script src="https://unpkg.com/feather-icons"></script>
+        
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -44,9 +47,25 @@
         crossorigin="anonymous"></script>
         <script src="//cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/v/dt/dt-2.0.5/datatables.min.js"></script>
+        
         <script>
             let table = new DataTable('#myTable');
 
+            function showConfirmation(id) {
+                document.getElementById('confirmationModal').classList.remove('hidden');
+                // Simpan ID formulir yang akan di-submit ketika konfirmasi "Ya" ditekan
+                document.getElementById('deleteButton').onclick = function () {
+                    document.getElementById('deleteForm_' + id).submit();
+                };
+            }
+
+            function closeConfirmation() {
+                document.getElementById('confirmationModal').classList.add('hidden');
+            }
+        </script>
+
+        <script>
+            feather.replace();
         </script>
     </body>
 </html>

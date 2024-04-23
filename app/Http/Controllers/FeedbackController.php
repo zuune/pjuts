@@ -139,6 +139,8 @@ class FeedbackController extends Controller
      */
     public function destroy(Feedback $feedback)
     {
-        //
+        $feedback->delete();
+
+        return back()->with('success', 'Feedback has been deleted!');
     }
 }
