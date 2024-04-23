@@ -6,10 +6,10 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}" class="mr-3">
-                        <img src="/images/logo.png" alt="" width="100">
+                        <img src="images/logo.png" alt="" width="100">
                     </a>
                     <a href="{{ route('dashboard') }}">
-                        <img src="/images/esdm-logo.png" alt="" width="40">                    
+                        <img src="images/esdm-logo.png" alt="" width="40">                    
                     </a>
 
                 </div>
