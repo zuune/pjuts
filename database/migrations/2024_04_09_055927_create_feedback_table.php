@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('feedback', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email');
+            // $table->string('email');
             $table->string('subject');
             $table->string('feedback_type');
             $table->text('comments');
@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('kota');
             $table->string('provinsi');
             $table->string('nomor_hp');
-            $table->string('nik');
+            // $table->string('nik');
             $table->text('foto');
             $table->text('foto_tiang');
             $table->softDeletes();

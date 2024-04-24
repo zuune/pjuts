@@ -9,7 +9,10 @@
                         <img src="images/logo.png" alt="" width="100">
                     </a>
                     <a href="{{ route('dashboard') }}">
-                        <img src="images/esdm-logo.png" alt="" width="40">                    
+                        <img src="images/esdm-logo.png" alt="" class="mr-5" width="40">                    
+                    </a>
+                    <a href="{{ route('dashboard') }}">
+                        <img src="images/sup-remove.png" alt="" width="100">                    
                     </a>
 
                 </div>

@@ -31,7 +31,6 @@ class sendEmail extends Mailable
     {
         return new Envelope(
             subject: $this->data_email['subject'],
-            from: $this->data_email['email'],
         );
     }
 

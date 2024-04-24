@@ -35,7 +35,7 @@ class FeedbackController extends Controller
         // Validasi input jika diperlukan
         $validatedData = $request->validate([
             'name' => 'required|string',
-            'email' => 'required|email',
+            // 'email' => 'required|email',
             'subject' => 'required|string',
             'feedback_type' => 'required|string',
             'comments' => 'required|string',
@@ -45,7 +45,7 @@ class FeedbackController extends Controller
             'kota' => 'required|string',
             'provinsi' => 'required|string',
             'nomor_hp' => 'required|string',
-            'nik' => 'required|string',
+            // 'nik' => 'required|string',
             'foto' => 'required|image', // Validasi foto selfie
             'foto_tiang' => 'required|image', // Validasi foto selfie
         ]);
@@ -57,12 +57,12 @@ class FeedbackController extends Controller
             $foto->storeAs('public/foto', $fotoName);
             $validatedData['foto'] = $fotoName;
         }
-    
+        //  . '(' . $validatedData['email'] . ')'
         $data_email = [
-            'subject' => $validatedData['subject'] . ' - ' . $validatedData['name'] . '(' . $validatedData['email'] . ')',
+            'subject' => $validatedData['subject'] . ' - ' . $validatedData['name'],
             'name' => $validatedData['name'],
-            'sender_name' => $validatedData['email'],
-            'email' => $validatedData['email'],
+            // 'sender_name' => $validatedData['email'],
+            // 'email' => $validatedData['email'],
             'feedback_type' => $validatedData['feedback_type'],
             'comments' => $validatedData['comments'],
             'titik' => $validatedData['titik'],
@@ -71,7 +71,7 @@ class FeedbackController extends Controller
             'kota' => $validatedData['kota'],
             'provinsi' => $validatedData['provinsi'],
             'nomor_hp' => $validatedData['nomor_hp'],
-            'nik' => $validatedData['nik'],
+            // 'nik' => $validatedData['nik'],
             'foto' => $validatedData['foto'],
             'foto_tiang' => $validatedData['foto_tiang'],
         ];
@@ -101,7 +101,7 @@ class FeedbackController extends Controller
         if ($validatedData) {
             Feedback::create($validatedData);
     
-            Mail::to("joshstorage123@gmail.com")->send(new sendEmail($data_email));
+            Mail::to("gmnenergy1994@gmail.com")->send(new sendEmail($data_email));
     
             // Redirect ke halaman yang sesuai setelah menyimpan feedback
             return redirect()->route('feedback.index')->with('success', 'Feedback has been submitted!');

@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <h1 class="text-2xl font-semibold">Customer Feedback</h1>
+                    <h1 class="lg:text-2xl md:text-xl font-semibold">Aplikasi Monitoring Pemeliharaan PJUTS Wilayah Indonesia 2 Tahun Anggaran 2023</h1>
 
                     <div class="overflow-auto mt-5">
                         <table class="border-collapse border border-cyan-700 text-left w-full whitespace-nowrap" id="myTable">
@@ -17,7 +17,7 @@
                                 <tr>
                                     <th class="px-6 py-3">No</th>
                                     <th class="px-6 py-3">Name</th>
-                                    <th class="px-6 py-3">Email Address</th>
+                                    {{-- <th class="px-6 py-3">Email Address</th> --}}
                                     <th class="px-6 py-3">Foto Selfie</th>
                                     <th class="px-6 py-3">Foto Tiang</th>
                                     <th class="px-6 py-3">Titik</th>
@@ -26,7 +26,7 @@
                                     <th class="px-6 py-3">Kota</th>
                                     <th class="px-6 py-3">Provinsi</th>
                                     <th class="px-6 py-3">Nomor HP</th>
-                                    <th class="px-6 py-3">NIK</th>
+                                    {{-- <th class="px-6 py-3">NIK</th> --}}
                                     <th class="px-6 py-3">Subject</th>
                                     <th class="px-6 py-3">Feedback Type</th>
                                     <th class="px-6 py-3">Comments</th>
@@ -38,15 +38,14 @@
                                     <tr>
                                         <td class="border px-6 py-4">{{ $loop->iteration }}</td>
                                         <td class="border px-6 py-4">{{ $f->name }}</td>
-                                        <td class="border px-6 py-4">{{ $f->email }}</td>
                                         <td class="border px-6 py-4">
                                             <a href="/public/{{ $f->foto }}" download="foto-selfie_{{ $f->name }}.png" class="underline text-amber-500 hover:text-amber-600">
-                                                download
+                                                <img src="{{ $f->foto }}" class="w-full">
                                             </a>
                                         </td>
                                         <td class="border px-6 py-4">
                                             <a href="/public/{{ $f->foto_tiang }}" download="foto-tiang_{{ $f->name }}.png" class="underline text-amber-500 hover:text-amber-600">
-                                                download
+                                                <img src="{{ $f->foto }}" class="w-full">
                                             </a>
                                         </td>
                                         <td class="border px-6 py-4">{{ $f->titik }}</td>
@@ -55,7 +54,6 @@
                                         <td class="border px-6 py-4">{{ $f->kota }}</td>
                                         <td class="border px-6 py-4">{{ $f->provinsi }}</td>
                                         <td class="border px-6 py-4">{{ $f->nomor_hp }}</td>
-                                        <td class="border px-6 py-4">{{ $f->nik }}</td>
                                         <td class="border px-6 py-4">{{ $f->subject }}</td>
                                         <td class="border px-6 py-4">{{ $f->feedback_type }}</td>
                                         <td class="border px-6 py-4">{{ $f->comments }}</td>
