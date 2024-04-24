@@ -40,12 +40,12 @@
                                         <td class="border px-6 py-4">{{ $f->name }}</td>
                                         <td class="border px-6 py-4">
                                             <a href="/public/{{ $f->foto }}" download="foto-selfie_{{ $f->name }}.png" class="underline text-amber-500 hover:text-amber-600">
-                                                <img src="{{ $f->foto }}" class="w-full">
+                                                <img src="/public/{{ $f->foto }}" class="w-full">
                                             </a>
                                         </td>
                                         <td class="border px-6 py-4">
                                             <a href="/public/{{ $f->foto_tiang }}" download="foto-tiang_{{ $f->name }}.png" class="underline text-amber-500 hover:text-amber-600">
-                                                <img src="{{ $f->foto }}" class="w-full">
+                                                <img src="/public/{{ $f->foto }}" class="w-full">
                                             </a>
                                         </td>
                                         <td class="border px-6 py-4">{{ $f->titik }}</td>
